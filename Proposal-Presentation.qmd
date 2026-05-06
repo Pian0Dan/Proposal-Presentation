@@ -31,6 +31,8 @@ options(width = 70)
 
 ## Sortition and representation
 
+
+
 ## The process
 
 - Define a population and traits of interest
@@ -38,9 +40,17 @@ options(width = 70)
 - Feed respondents into the sortition algorithm
 - Use the generated panel for deliberation and decision-making
 
+# But where do we assess the representativeness?
+
 ## The algorithms
 
+LexiMin, or Lexicographic minimization
+
 ## What's new?
+
+- Visualising to improve transparency
+- Measuring performance and how extreme cases are handled
+- Building a dashboard and framework to encourage evaluation of resulting panels against starting populations or prior stages
 
 ##
 
