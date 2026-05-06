@@ -1,0 +1,102 @@
+---
+title: Are You in the Room? A Framework for Sortition and Representation
+author: Daniel Loza
+date: today
+toc: false
+format: # Use only one of these
+  presentation-revealjs+letterbox: default
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+library(knitr)
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(tsibble)
+library(feasts)
+library(fable)
+library(UpSetR)
+library(here)
+library(tidyverse)
+library(devtools)
+require(ggmosaic)
+library(patchwork)
+options(width = 70)
+```
+
+# Are you in the room?
+
+## Sortition and representation
+
+## The process
+
+- Define a population and traits of interest
+- Request expressions of interest from a random subset of the population
+- Feed respondents into the sortition algorithm
+- Use the generated panel for deliberation and decision-making
+
+## The algorithms
+
+## What's new?
+
+##
+
+# Tables and graphs
+
+## Slide 2
+
+A nice table
+
+```{r}
+mtcars |>
+  select(mpg:wt) |>
+  head() |>
+  kable(booktabs = TRUE)
+```
+
+## Slide 3
+
+And a graph
+
+```{r}
+#| fig-height: 3.8
+mtcars |>
+  ggplot(aes(x=wt, y = mpg)) +
+  geom_point()
+```
+
+## Slide 4
+
+The sample standard deviation is given by
+$$
+  s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2}
+$$
+
+## Testing monospace font
+
+```{r}
+#| echo: true
+mtcars |> as_tibble() |> head()
+```
+
+
+## Testing math fonts
+
+* Calligraphic
+
+  * $\mathcal{ABCDE}$
+
+* Script
+
+  * $\mathscr{ABCDE}$
+
+* Fraktur
+
+  * $\mathfrak{ABCDE}$
+
+* Mathbb
+
+  * $\mathbb{ABCDE}$
