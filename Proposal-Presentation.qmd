@@ -68,3 +68,58 @@ options(width = 70)
 
 ## Why is this important? A small test case.
 
+Here is a summary of a population of individuals, which we want to capture in a panel.
+
+```{r}
+#| echo: false
+
+# Data building
+
+# Set seed
+set.seed(13)  # for reproducibility
+
+## Exact counts
+age <- c(
+  rep("18-29", 250),
+  rep("30-44", 300),
+  rep("45-64", 250),
+  rep("65+", 200)
+)
+
+gender <- c(
+  rep("Male", 480),
+  rep("Female", 480),
+  rep("Non-binary", 40)
+)
+
+# Shuffle to mix values
+age <- sample(age)
+gender <- sample(gender)
+
+# Combine and add pool_member_id for Panelot functionality
+pop_data <- data.frame(Age = age, Gender = gender)
+pop_data$pool_member_identifier <- 1:nrow(pop_data)
+pop_data <- pop_data[, c("pool_member_identifier", "Age", "Gender")]
+```
+
+```{r}
+#| label: pop-pie
+#| fig-align: center
+#| fig-width: 8
+#| fig-height: 4
+#| out-width: 100%
+p1 <- ggplot(pop_data, aes(x = "", fill = Age)) +
+  geom_bar(width = 1) +
+  coord_polar(theta = "y") +
+  labs(title = "Age Distribution of Population") +
+  theme_void() +
+  scale_fill_manual(values = c("lightblue", "lightgreen", "lightpink", "lightyellow"))
+p2 <- ggplot(pop_data, aes(x = "", fill = Gender)) +
+  geom_bar(width = 1) +
+  coord_polar(theta = "y") +
+  labs(title = "Gender Distribution of Population") +
+  theme_void() +
+  scale_fill_manual(values = c("lightpink", "lightblue", "purple"))
+
+p1 + p2 + plot_layout(ncol=2)
+```
