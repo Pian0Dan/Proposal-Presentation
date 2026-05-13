@@ -48,9 +48,9 @@ options(width = 70)
 
 ## Improving the process
 
-- Visualising to improve transparency
-- Measuring performance and how extreme cases are handled
-- Building a dashboard and framework to encourage evaluation of resulting panels against starting populations or prior stages
+- Add a step for reviewing performance of the process
+- Create an opportunity to investigate panel composition more deeply and explicitly
+- Consider how this affects constraint choices
 
 ## How will we do this?
 
@@ -61,10 +61,10 @@ options(width = 70)
 ## Specific tests
 
 - Populations (N) of size 10000, 50000 and 100000
-- Traits of interest (k) of 3 and 5, as these are common in practice
-- Population distributions of Uniform, Gaussian, and Beta, to show how the algorithm performs with different levels of skew and complexity
-- Uniform and varied response rates of 10%, 30%, and 50%, to show how the algorithm performs when different groups are more or less likely to respond
-- Extreme cases where one or more groups are particularly small or large, to show how the algorithm performs when certain groups are more or less likely to be represented
+- Traits of interest (k) of 3 and 5
+- Population distributions of Uniform, Gaussian, and Beta
+- Uniform and varied response rates of 1%, 3%, and 5%
+- Extreme cases where one or more groups are particularly small or large
 
 ## Why is this important? A small test case.
 
