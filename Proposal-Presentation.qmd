@@ -15,13 +15,9 @@ library(ggplot2)
 library(dplyr)
 library(readr)
 library(tidyr)
-library(tsibble)
-library(feasts)
-library(fable)
 library(UpSetR)
 library(here)
 library(tidyverse)
-library(devtools)
 require(ggmosaic)
 library(patchwork)
 options(width = 70)
@@ -31,7 +27,15 @@ options(width = 70)
 
 ## Sortition and representation
 
+- Used since ancient times, but recently gaining renewed interest
+- Descriptively representative
+- Enables greater diversity, inclusion and representation of communities
 
+## The algorithm
+
+- LexiMin, or Lexicographic Maximin
+- Iteratively selects individuals to maximise the minimum likelihood of selection across traits of interest
+- Can be applied to any set of traits and any population
 
 ## The process
 
@@ -42,71 +46,25 @@ options(width = 70)
 
 # But where do we assess the representativeness?
 
-## The algorithms
-
-LexiMin, or Lexicographic minimization
-
-## What's new?
+## Improving the process
 
 - Visualising to improve transparency
 - Measuring performance and how extreme cases are handled
 - Building a dashboard and framework to encourage evaluation of resulting panels against starting populations or prior stages
 
-##
+## How will we do this?
 
-# Tables and graphs
+- Simulate a population and traits of interest
+- Simulate the process of requesting expressions of interest and selection
+- Visualise the results and build a dashboard to evaluate representativeness
 
-## Slide 2
+## Specific tests
 
-A nice table
+- Populations (N) of size 10000, 50000 and 100000
+- Traits of interest (k) of 3 and 5, as these are common in practice
+- Population distributions of Uniform, Gaussian, and Beta, to show how the algorithm performs with different levels of skew and complexity
+- Uniform and varied response rates of 10%, 30%, and 50%, to show how the algorithm performs when different groups are more or less likely to respond
+- Extreme cases where one or more groups are particularly small or large, to show how the algorithm performs when certain groups are more or less likely to be represented
 
-```{r}
-mtcars |>
-  select(mpg:wt) |>
-  head() |>
-  kable(booktabs = TRUE)
-```
+## Why is this important? A small test case.
 
-## Slide 3
-
-And a graph
-
-```{r}
-#| fig-height: 3.8
-mtcars |>
-  ggplot(aes(x=wt, y = mpg)) +
-  geom_point()
-```
-
-## Slide 4
-
-The sample standard deviation is given by
-$$
-  s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2}
-$$
-
-## Testing monospace font
-
-```{r}
-#| echo: true
-mtcars |> as_tibble() |> head()
-```
-
-
-## Testing math fonts
-
-* Calligraphic
-
-  * $\mathcal{ABCDE}$
-
-* Script
-
-  * $\mathscr{ABCDE}$
-
-* Fraktur
-
-  * $\mathfrak{ABCDE}$
-
-* Mathbb
-
-  * $\mathbb{ABCDE}$
