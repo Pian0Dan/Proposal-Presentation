@@ -206,7 +206,7 @@ p4 <- ggplot(pan_select, aes(x = "", fill = Gender)) +
 
 ## The algorithm (LexiMin)
 
-![Flanigan et al., 2021](LexiMin.png)
+![Flanigan et al. (2021)](LexiMin.png)
 
 # But where in the process do we assess the representativeness?
 
