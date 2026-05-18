@@ -204,9 +204,11 @@ p4 <- ggplot(pan_select, aes(x = "", fill = Gender)) +
 - Feed respondents into the sortition algorithm
 - Use the generated panel for deliberation and decision-making
 
-## The algorithm (LexiMin)
+## The algorithm (LexiMin) {.small-text}
 
 ![Flanigan et al. (2021)](LexiMin.png)
+
+Step (1): construct a maximally fair output distribution 𝒟 over an optimal portfolio 𝒫 of quota-compliant panels (denoted by coloured boxes), which is done by iteratively building an optimal portfolio of panels and computing the fairest distribution over that portfolio. Step (2): sample the distribution to select a final panel.
 
 # But where in the process do we assess the representativeness?
 
@@ -294,8 +296,7 @@ upset(
 
 ggplot(data = pan_select) +
   geom_mosaic(aes(x = product(Gender, Age), fill = Gender)) +
-  labs(title = "Age vs Gender Distribution of Selected Panel",
-        x = "Age Group",
+  labs(x = "Age Group",
         y = "Gender") +
   theme_minimal() +
   scale_fill_manual(values = c("pink", "lightblue", "purple"))
