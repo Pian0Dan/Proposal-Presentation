@@ -7,7 +7,8 @@ format:
     toc: false
     slide-number-format: "c/t"
     show-slide-number: all
-
+bibliography: "packages.bib"
+suppress-bibliography: true
 ---
 
 ```{r}
@@ -24,6 +25,22 @@ library(tidyverse)
 require(ggmosaic)
 library(patchwork)
 options(width = 70)
+```
+
+```{r}
+knitr::write_bib(
+  c(
+    "ggplot2",
+    "dplyr",
+    "patchwork",
+    "readr",
+    "tidyr",
+    "here",
+    "ggmosaic",
+    "UpSetR"
+  ),
+  "packages.bib"
+)
 ```
 
 # Are you in the room?
@@ -322,11 +339,14 @@ upset(
 ::::
 
 ## What's the goal?
+<br>
+**Improve the process by:** 
+<br> <br>
 
-1. Demonstrate how LexiMin operates
-2. Measure the level of representation it achieves
-3. Investigate where and how it falls short
-4. Build a tool to diagnose this more actively in practice
+1. Demonstrating how LexiMin operates
+2. Measuring the level of representation it achieves
+3. Investigating where and how it falls short
+4. Building a tool to diagnose this more actively in practice
 
 ## How will we achieve this?
 
@@ -344,5 +364,8 @@ upset(
 - Uniform and varied response rates of 1%, 3%, and 5%
 - Extreme cases where one or more groups are particularly small or large
 
+## Reproducibility and Software
 
+To ensure results are reproducible, we will be using set seeds for all random processes, and will be sharing all code and data used in the study on a public GitHub repository (<https://github.com/Pian0Dan/Proposal-Presentation>) for version control. Additionally, we will be using R code in Quarto to ensure text matches computations (literate programming), with the packages tidyr [@R-tidyr], dplyr [@R-dplyr], here [@R-here], readr [@R-readr], ggplot2 [@R-ggplot2], patchwork [@R-patchwork], ggmosaic [@R-ggmosaic], and  UpSetR [@R-UpSetR] for data manipulation, storage and visualisation.
 
+# Let's make sure we're all in the room.
