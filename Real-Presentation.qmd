@@ -230,7 +230,7 @@ Step (1): construct a maximally fair output distribution 𝒟 over an optimal po
 ::: {.column width="50%"}
 
 ```{r}
-#| fig-cap: "Relationship between age and gender in the population shown as a mosaic plot. Colour indicates gender. Width of the bars correspond to the count within the category. Every combination contains observations."
+#| fig-cap: "Every combination of age and gender is present in similar proportions."
 #| fig-pos: "H"
 #| fig-width: 4
 #| fig-asp: 0.825
@@ -264,7 +264,7 @@ upset_pop_data <- pop_data %>%
 ```
 
 ```{r}
-#| fig-cap: "Relationship between age and gender in the population shown as an UpSet plot. Bar heights indicate the number of observations within each intersection. All intersections are present, with the largest being between the 30-44 age group and the female gender, followed by 30-44 and male."
+#| fig-cap: "All intersections are present. The largest groups is 30-44 females, followed by 30-44 and males. The smallest group is non-binary over 65."
 #| fig-pos: "H"
 #| fig-width: 4
 #| fig-asp: 0.825
@@ -289,7 +289,7 @@ upset(
 ::: {.column width="50%"}
 
 ```{r}
-#| fig-cap: "Relationship between age and gender in the selected panel shown as a mosaic plot. Colour indicates gender. Width of the bars correspond to the count within the category. Seven intersections are now not present, and the distribution has shifted significantly from the population and survey sample datasets."
+#| fig-cap: "Seven intersections are now not present, and the distribution has shifted significantly from the population and survey sample datasets."
 #| fig-pos: "H"
 #| fig-width: 4
 #| fig-asp: 0.825
@@ -322,7 +322,7 @@ upset_pan_data <- pan_select %>%
 ```
 
 ```{r}
-#| fig-cap: "Relationship between age and gender in the selected panel shown as an UpSet plot. Bar heights indicate the number of observations within each intersection. Level of representation has significantly decreased, with a number of intersections, including 30-44 and male, now missing."
+#| fig-cap: "Level of representation has significantly decreased, with a number of intersections, including 30-44 and male, now missing."
 #| fig-pos: "H"
 #| fig-width: 4
 #| fig-asp: 0.825
@@ -357,7 +357,7 @@ upset(
 
 ## Specific tests
 
-- Populations (N) of size 10000, 50000 and 100000
+- Populations (N) of size 100000
 - Population subsets (contact rates) of 10%, 30% and 50%
 - Panel sizes (k) of 30 and 50
 - Traits of interest (m) of 3 and 5
@@ -367,6 +367,10 @@ upset(
 
 ## Reproducibility and Software
 
-To ensure results are reproducible, we will be using set seeds for all random processes, and will be sharing all code and data used in the study on a public GitHub repository (<https://github.com/Pian0Dan/Proposal-Presentation>) for version control. Additionally, we will be using R code in Quarto to ensure text matches computations (literate programming), with the packages tidyr [@R-tidyr], dplyr [@R-dplyr], here [@R-here], readr [@R-readr], ggplot2 [@R-ggplot2], patchwork [@R-patchwork], ggmosaic [@R-ggmosaic], and  UpSetR [@R-UpSetR] for data manipulation, storage and visualisation.
+::: {style="font-size: 70%;"}
+
+Code and data for presentation available at: (<https://github.com/Pian0Dan/Proposal-Presentation>). Code is written in R, using Quarto, with the packages tidyr [@R-tidyr], dplyr [@R-dplyr], here [@R-here], readr [@R-readr], ggplot2 [@R-ggplot2], patchwork [@R-patchwork], ggmosaic [@R-ggmosaic], and  UpSetR [@R-UpSetR] for data manipulation, storage and visualisation.
+
+:::
 
 # Let's make sure we're all in the room.
