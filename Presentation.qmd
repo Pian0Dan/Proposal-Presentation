@@ -1,5 +1,5 @@
 ---
-title: Are You in the Room? A Framework for Sortition and Representation
+title: Are You in the Room? <br> A Framework for Sortition and Representation
 author: Daniel Loza
 date: today
 format:
@@ -8,7 +8,6 @@ format:
     slide-number-format: "c/t"
     show-slide-number: all
 bibliography: "references.bib"
-# suppress-bibliography: true
 ---
 
 ```{r}
@@ -72,11 +71,6 @@ pop_data <- pop_data[, c("pool_member_identifier", "Age", "Gender")]
 ```
 
 ```{r}
-#| label: pop-pie
-#| fig-align: center
-#| fig-width: 10
-#| fig-height: 4
-#| out-width: 100%
 p1 <- ggplot(pop_data, aes(x = "", fill = Age)) +
   geom_bar(width = 1) +
   coord_polar(theta = "y") +
@@ -353,7 +347,7 @@ upset(
 
 Code and data for presentation available at <https://github.com/Pian0Dan/Proposal-Presentation>. Slides produced using [Quarto](https://quarto.org/), with the packages:
 
-::: {style="font-size: 70%;"}
+::: {style="font-size: 75%;"}
 
 - tidyr [@R-tidyr] 
 
@@ -376,4 +370,3 @@ Code and data for presentation available at <https://github.com/Pian0Dan/Proposa
 # Let's make sure we're all in the room.
 
 ## References {style="font-size: 65%;"}
-
