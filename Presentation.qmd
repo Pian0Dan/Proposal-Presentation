@@ -1,7 +1,8 @@
 ---
 title: Are You in the Room? <br> A Framework for Sortition and Representation
 author: Daniel Loza
-date: today
+date: 05-20-2026
+date-format: long
 format:
   presentation-revealjs+letterbox:
     toc: false
