@@ -7,8 +7,8 @@ format:
     toc: false
     slide-number-format: "c/t"
     show-slide-number: all
-bibliography: "packages.bib"
-suppress-bibliography: true
+bibliography: "references.bib"
+# suppress-bibliography: true
 ---
 
 ```{r}
@@ -25,22 +25,6 @@ library(tidyverse)
 require(ggmosaic)
 library(patchwork)
 options(width = 70)
-```
-
-```{r}
-knitr::write_bib(
-  c(
-    "ggplot2",
-    "dplyr",
-    "patchwork",
-    "readr",
-    "tidyr",
-    "here",
-    "ggmosaic",
-    "UpSetR"
-  ),
-  "packages.bib"
-)
 ```
 
 # Are you in the room?
@@ -206,7 +190,7 @@ p4 <- ggplot(pan_select, aes(x = "", fill = Gender)) +
 
 ## The algorithm (LexiMin) {.small-text}
 
-![Flanigan et al. (2021)](LexiMin.png)
+![@Flanigan2021FairAF](LexiMin.png)
 
 Step (1): construct a maximally fair output distribution 𝒟 over an optimal portfolio 𝒫 of quota-compliant panels (denoted by coloured boxes), which is done by iteratively building an optimal portfolio of panels and computing the fairest distribution over that portfolio. Step (2): sample the distribution to select a final panel.
 
@@ -367,10 +351,29 @@ upset(
 
 ## Reproducibility and Software
 
+Code and data for presentation available at <https://github.com/Pian0Dan/Proposal-Presentation>. Slides produced using [Quarto](https://quarto.org/), with the packages:
+
 ::: {style="font-size: 70%;"}
 
-Code and data for presentation available at: (<https://github.com/Pian0Dan/Proposal-Presentation>). Code is written in R, using Quarto, with the packages tidyr [@R-tidyr], dplyr [@R-dplyr], here [@R-here], readr [@R-readr], ggplot2 [@R-ggplot2], patchwork [@R-patchwork], ggmosaic [@R-ggmosaic], and  UpSetR [@R-UpSetR] for data manipulation, storage and visualisation.
+- tidyr [@R-tidyr] 
+
+- dplyr [@R-dplyr] 
+
+- here [@R-here] 
+
+- readr [@R-readr]
+
+- ggplot2 [@R-ggplot2]
+
+- patchwork [@R-patchwork] 
+
+- ggmosaic [@R-ggmosaic]
+
+- UpSetR [@R-UpSetR]
 
 :::
 
 # Let's make sure we're all in the room.
+
+## References {style="font-size: 65%;"}
+
