@@ -207,7 +207,7 @@ Step (1): construct a maximally fair output distribution 𝒟 over an optimal po
 ((p3 + plot_spacer() + p4) + plot_layout(widths = c(4, 0.1, 4)))
 ```
 
-## A better way
+## A better way (representing the population)
 
 :::: {.columns}
 
@@ -216,7 +216,7 @@ Step (1): construct a maximally fair output distribution 𝒟 over an optimal po
 ```{r}
 #| fig-cap: "Every combination of age and gender is present in similar proportions."
 #| fig-pos: "H"
-#| fig-width: 4
+#| fig-width: 5
 #| fig-asp: 0.825
 
 
@@ -248,9 +248,9 @@ upset_pop_data <- pop_data %>%
 ```
 
 ```{r}
-#| fig-cap: "All intersections are present. The largest groups is 30-44 females, followed by 30-44 and males. The smallest group is non-binary over 65."
+#| fig-cap: "All intersections are present. The largest groups are 30-44 and female, followed by 30-44 and male. The smallest group is non-binary over 65."
 #| fig-pos: "H"
-#| fig-width: 4
+#| fig-width: 5
 #| fig-asp: 0.825
 
 upset(
@@ -275,7 +275,7 @@ upset(
 ```{r}
 #| fig-cap: "Seven intersections are now not present, and the distribution has shifted significantly from the population and survey sample datasets."
 #| fig-pos: "H"
-#| fig-width: 4
+#| fig-width: 5
 #| fig-asp: 0.825
 
 ggplot(data = pan_select) +
@@ -308,7 +308,7 @@ upset_pan_data <- pan_select %>%
 ```{r}
 #| fig-cap: "Level of representation has significantly decreased, with a number of intersections, including 30-44 and male, now missing."
 #| fig-pos: "H"
-#| fig-width: 4
+#| fig-width: 5
 #| fig-asp: 0.825
 
 upset(
@@ -325,7 +325,7 @@ upset(
 
 ## What's the goal?
 <br>
-**Improve the process by:** 
+<u>**Improve the process by:**</u>
 <br> <br>
 
 1. Demonstrating how LexiMin operates
